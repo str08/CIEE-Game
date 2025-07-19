@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0jfltrcdhkbx"]
+
+[ext_resource type="PackedScene" uid="uid://bbgpobqiliyly" path="res://Scenes/ship.tscn" id="1_ebmjs"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Ship" parent="." instance=ExtResource("1_ebmjs")]
+scale = Vector2(0.5, 0.5)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-2, 0)
