@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bbgpobqiliyly"]
+[gd_scene load_steps=6 format=3 uid="uid://bbgpobqiliyly"]
 
 [ext_resource type="Script" uid="uid://fpsege0xe0t0" path="res://Scripts/ship.gd" id="1_v1qfn"]
 [ext_resource type="Texture2D" uid="uid://d1epcroou4wq5" path="res://Assets/image-removebg-preview (8).png" id="2_hh5uf"]
 [ext_resource type="PackedScene" uid="uid://co0rkb7ls38ku" path="res://Scenes/bullet_basic.tscn" id="2_xxxu3"]
+[ext_resource type="PackedScene" uid="uid://wnuxxpv066e7" path="res://Scenes/hitbox.tscn" id="3_6ejuo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_v1qfn"]
 radius = 48.0937
@@ -11,10 +12,12 @@ radius = 48.0937
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_v1qfn")
 bullet_scene = ExtResource("2_xxxu3")
+shape_scene = ExtResource("3_6ejuo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, -27)
 shape = SubResource("CircleShape2D_v1qfn")
+debug_color = Color(0.996763, 0, 0.180235, 0.42)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_hh5uf")
