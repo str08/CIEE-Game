@@ -24,7 +24,7 @@ func shoot():
 	$GunCooldown.start()
 	var b = bullet_scene.instantiate()
 	get_tree().root.add_child(b)
-	b.start(position + Vector2(0, -50))
+	b.start(position + Vector2(0, -10))
 	
 func _process(_delta):
 	var temp_speed = speed

@@ -4,7 +4,7 @@
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(-2.38419e-07, -2.27374e-13)
-scale = Vector2(0.2, 0.2)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.01, 0.01)
 texture = ExtResource("1_i7vqw")
