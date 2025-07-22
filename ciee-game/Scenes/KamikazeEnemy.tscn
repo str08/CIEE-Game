@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cah2afxj6i7hm"]
+
+[ext_resource type="PackedScene" uid="uid://ue3jkgi7nmb7" path="res://Enemies/BaseEnemy.tscn" id="1_npaf2"]
+[ext_resource type="Script" uid="uid://c5qcdrofu17kl" path="res://Enemies/kamikaze_enemy.gd" id="2_ccllv"]
+
+[node name="BaseEnemy" instance=ExtResource("1_npaf2")]
+script = ExtResource("2_ccllv")
+kamikaze_type = 0
+acceleration = 50.0
+max_speed = 300.0
+zigzag_amplitude = 60.0
+spiral_rotation_speed = 4.0
+target_position = Vector2(320, 240)
+
+[node name="ColorRect" parent="." index="0"]
+color = Color(1, 0.647059, 0, 1)
