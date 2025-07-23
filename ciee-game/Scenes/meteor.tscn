@@ -1,0 +1,15 @@
+[gd_scene load_steps=7 format=3 uid="uid://dasqrerdigf4r"]
+
+[ext_resource type="Script" uid="uid://cakwue3xb2o5d" path="res://Scripts/meteor.gd" id="1_5civa"]
+[ext_resource type="Texture2D" uid="uid://b0kkilr8ns5yi" path="res://Assets/metiora1.png" id="2_d1487"]
+[ext_resource type="Texture2D" uid="uid://hx8axua8hoct" path="res://Assets/metiora2.png" id="3_7hap5"]
+[ext_resource type="Texture2D" uid="uid://dqki3ofc1j7lx" path="res://Assets/metiora3.png" id="4_7xk1x"]
+[ext_resource type="Texture2D" uid="uid://dc0tc40sxcjam" path="res://Assets/metiora4.png" id="5_kgtfb"]
+[ext_resource type="Texture2D" uid="uid://cpi6wu7tgf1vi" path="res://Assets/metiora5.png" id="6_yjsjf"]
+
+[node name="MeteorBackground" type="Node2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_5civa")
+possible_textures = Array[Texture2D]([ExtResource("2_d1487"), ExtResource("3_7hap5"), ExtResource("4_7xk1x"), ExtResource("5_kgtfb"), ExtResource("6_yjsjf")])
+
+[node name="Sprite2D" type="Sprite2D" parent="."]

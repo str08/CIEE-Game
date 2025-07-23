@@ -10,18 +10,26 @@ radius = 4.0
 
 [node name="Ship" type="CharacterBody2D"]
 scale = Vector2(0.5, 0.5)
+collision_mask = 9
 script = ExtResource("1_v1qfn")
 bullet_scene = ExtResource("2_xxxu3")
 shape_scene = ExtResource("3_6ejuo")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_v1qfn")
-debug_color = Color(0.996763, 0, 0.180235, 0.42)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("4_6ejuo")
 
 [node name="GunCooldown" type="Timer" parent="."]
 one_shot = true
+
+[node name="PickupArea" type="Area2D" parent="."]
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea"]
+shape = SubResource("CircleShape2D_v1qfn")
+debug_color = Color(0.996763, 0, 0.180235, 0.42)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_v1qfn")
+debug_color = Color(0.996763, 0, 0.180235, 0.42)
 
 [connection signal="timeout" from="GunCooldown" to="." method="_on_gun_cooldown_timeout"]

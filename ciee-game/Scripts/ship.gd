@@ -12,8 +12,12 @@ var slow_indicator : Node2D = null  # New variable to track the circle
 var can_shoot = true
 @onready var collision_shape_2d: CollisionShape2D = $CollisionShape2D
 @onready var shop_menu: BoxContainer = $"../ShopMenu"
+@onready var pickup_area: Area2D = $PickupArea
 
 func _ready():
+	$PickupArea.add_to_group("player_pickup")
+	add_to_group("player")
+
 	$"../ShopMenu".connect("healthUp", _on_healthUp)
 	$"../ShopMenu".connect("attackUp", _on_attackUp)
 	$"../ShopMenu".connect("bulletUp", _on_bulletUp)
@@ -65,6 +69,18 @@ func _process(_delta):
 		shoot()
 
 	move_and_slide()
+	var viewport_size = get_viewport_rect().size
+	var half_size = viewport_size / 2.0
+	var margin = 16  # padding so player doesn’t touch screen edge
+
+	# Assuming camera is fixed at (0, 0)
+	var min_x = -half_size.x + margin
+	var max_x = half_size.x - margin
+	var min_y = -half_size.y + margin
+	var max_y = half_size.y - margin
+
+	position.x = clamp(position.x, min_x, max_x)
+	position.y = clamp(position.y, min_y, max_y)
 	
 func _on_gun_cooldown_timeout():
 	can_shoot = true
