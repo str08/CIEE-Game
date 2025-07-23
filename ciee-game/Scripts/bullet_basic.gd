@@ -1,9 +1,7 @@
 extends Area2D
+
 @export var speed = -1000
-
-
-func _ready() -> void:
-	add_to_group("player_bullets")
+@export var damage = 1
 
 func start(pos):
 	position = pos
@@ -11,5 +9,5 @@ func start(pos):
 func _process(delta):
 	position.y += speed * delta
 
-func _on_area_entered(_area: Node):
+func _on_area_entered(_area: Area2D):
 	queue_free()
