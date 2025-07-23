@@ -1,4 +1,4 @@
-extends "res://Scripts/base_boss.gd"
+extends "res://Bosses/Scripts/base_boss.gd"
 
 # Phase thresholds
 @export var phase2_threshold: float = 0.66
@@ -105,11 +105,11 @@ func _teleport_random():
 	var pick = tele_spots[randi() % tele_spots.size()]
 	_fade_to(pick.global_position)
 
-# Simple snap version (no fade) if you prefer:
+# Simple snap version (no fade) if we prefer:
 # position = pick.global_position
 
 func _fade_to(target: Vector2):
-	# If you want to animate fade out/in, do it here.
+	# If we want to animate fade out/in, do it here.
 	# For now just snap:
 	position = target
 
