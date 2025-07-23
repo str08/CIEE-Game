@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnj6drorjyvml"
-path="res://.godot/imported/crustTilesWithCliffs.png-a45d9e29a6823c63c316b97a6611467c.ctex"
+uid="uid://de7ybp8xywy6t"
+path="res://.godot/imported/tree7.png-78aff86dfc99e76a56ee80a8774ddac9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/crustTilesWithCliffs.png"
-dest_files=["res://.godot/imported/crustTilesWithCliffs.png-a45d9e29a6823c63c316b97a6611467c.ctex"]
+source_file="res://Assets/tree7.png"
+dest_files=["res://.godot/imported/tree7.png-78aff86dfc99e76a56ee80a8774ddac9.ctex"]
 
 [params]
 
