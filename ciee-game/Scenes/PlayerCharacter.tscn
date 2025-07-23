@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://b185sc41vbcpk"]
+[gd_scene load_steps=15 format=3 uid="uid://b185sc41vbcpk"]
 
 [ext_resource type="Script" uid="uid://d2vsj1dbaw0tw" path="res://Scenes/player_character.gd" id="1_5gnj7"]
 [ext_resource type="Texture2D" uid="uid://bcmmddebp0fe7" path="res://Assets/playerCharacterfull.png" id="1_v7sut"]
@@ -174,9 +174,13 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5gnj7"]
 size = Vector2(7, 4)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2getf"]
+size = Vector2(7, 4)
+
 [node name="PlayerCharacter" type="CharacterBody2D"]
-collision_mask = 16
+collision_mask = 48
 script = ExtResource("1_5gnj7")
+speed = 200
 
 [node name="spr" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -192,3 +196,9 @@ libraries = {
 [node name="coll" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 6)
 shape = SubResource("RectangleShape2D_5gnj7")
+
+[node name="zDetector" type="Area2D" parent="."]
+
+[node name="coll" type="CollisionShape2D" parent="zDetector"]
+position = Vector2(0.5, 6)
+shape = SubResource("RectangleShape2D_2getf")

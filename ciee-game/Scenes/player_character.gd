@@ -31,7 +31,9 @@ func _process(delta):
 				$anim.play("idleUp")
 	move_and_slide()
 	
-		
-	
-	
-		
+
+func _on_zindex_lower_area_area_entered(area):
+	z_index = 0
+
+func _on_zindex_lower_area_area_exited(area):
+	z_index = 1
