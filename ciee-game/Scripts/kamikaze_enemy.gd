@@ -1,4 +1,4 @@
-extends "res://Scripts/basic_enemy.gd"
+extends "res://Enemies/Scripts/basic_enemy.gd"
 
 enum KamikazeType {
 	STRAIGHT,
@@ -28,8 +28,9 @@ func _process(delta: float) -> void:
 			_zigzag_dive(delta)
 
 func _ready():
-	if use_random_movement:
-		kamikaze_type = KamikazeType.values()[randi() % KamikazeType.size()]
+	pass
+	#if use_random_movement:
+	#	kamikaze_type = KamikazeType.values()[randi() % KamikazeType.size()]
 
 func _straight_dive(delta: float) -> void:
 	var direction = (target_position - position).normalized()
