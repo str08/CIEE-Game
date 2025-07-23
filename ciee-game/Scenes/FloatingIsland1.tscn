@@ -17,3 +17,5 @@ tile_set = ExtResource("1_u5xis")
 
 [node name="PlayerCharacter" parent="." instance=ExtResource("2_wp3r2")]
 position = Vector2(24, 264)
+
+[node name="Camera2D" type="Camera2D" parent="PlayerCharacter"]
