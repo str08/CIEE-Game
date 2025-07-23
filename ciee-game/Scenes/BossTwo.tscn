@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://o3pr5q2j18ds"]
 
-[ext_resource type="PackedScene" uid="uid://cieq6mil2t854" path="res://Scenes/BaseBoss.tscn" id="1_83wv5"]
-[ext_resource type="Script" path="res://Scripts/boss_two.gd" id="2_ug8f0"]
+[ext_resource type="PackedScene" uid="uid://cieq6mil2t854" path="res://Bosses/Scenes/BaseBoss.tscn" id="1_83wv5"]
+[ext_resource type="Script" uid="uid://bm6h74r1uj5jk" path="res://Bosses/Scripts/boss_two.gd" id="2_ug8f0"]
 
 [node name="BaseBoss" instance=ExtResource("1_83wv5")]
 script = ExtResource("2_ug8f0")
@@ -22,10 +22,10 @@ rain_columns = 8
 wall_rows = 4
 
 [node name="ColorRect" parent="." index="0"]
-offset_left = 207.0
-offset_top = 123.0
-offset_right = 239.0
-offset_bottom = 155.0
+offset_left = 150.0
+offset_top = 50.0
+offset_right = 182.0
+offset_bottom = 82.0
 color = Color(1, 0, 0.819608, 1)
 
 [node name="TeleportPoints" type="Node2D" parent="." index="2"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cieq6mil2t854"]
 
-[ext_resource type="Script" uid="uid://bb2urcjeq28xo" path="res://Scripts/base_boss.gd" id="1_dq00a"]
+[ext_resource type="Script" uid="uid://bb2urcjeq28xo" path="res://Bosses/Scripts/base_boss.gd" id="1_dq00a"]
 
 [node name="BaseBoss" type="Node2D"]
 script = ExtResource("1_dq00a")
