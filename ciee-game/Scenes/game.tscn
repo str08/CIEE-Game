@@ -38,8 +38,9 @@ position = Vector2(0, 8)
 scale = Vector2(2, 2)
 collision_mask = 4
 
-[node name="ShopMenu" parent="." instance=ExtResource("4_3dryh")]
+[node name="ShopMenu2" parent="." instance=ExtResource("4_3dryh")]
 visible = false
+
 [node name="UI" parent="." instance=ExtResource("7_1l0tm")]
 offset_left = -299.0
 offset_top = 174.0

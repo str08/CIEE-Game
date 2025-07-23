@@ -1,10 +1,10 @@
-[gd_scene load_steps=7 format=4 uid="uid://fom3w24yh0rc"]
+[gd_scene load_steps=7 format=4 uid="uid://bstikj378lmut"]
 
 [ext_resource type="TileSet" uid="uid://dnsfqxhiwo5nb" path="res://Assets/Tilemaps/Islands.tres" id="1_u5xis"]
-[ext_resource type="PackedScene" uid="uid://b185sc41vbcpk" path="res://Scenes/PlayerCharacter.tscn" id="2_wp3r2"]
-[ext_resource type="PackedScene" uid="uid://cl6vngjfk15sp" path="res://Scenes/TreeType1.tscn" id="3_kyhug"]
-[ext_resource type="PackedScene" uid="uid://ca4qs67yjfkqp" path="res://Scenes/TreeType4.tscn" id="4_gciuc"]
-[ext_resource type="PackedScene" uid="uid://d2w7g0g41sbuf" path="res://Scenes/TreeType5.tscn" id="5_6sx6n"]
+[ext_resource type="PackedScene" path="res://Scenes/PlayerCharacter.tscn" id="2_wp3r2"]
+[ext_resource type="PackedScene" path="res://Scenes/TreeType1.tscn" id="3_kyhug"]
+[ext_resource type="PackedScene" path="res://Scenes/TreeType4.tscn" id="4_gciuc"]
+[ext_resource type="PackedScene" path="res://Scenes/TreeType5.tscn" id="5_6sx6n"]
 [ext_resource type="PackedScene" uid="uid://c3y6pmjubf1le" path="res://Scenes/Z-indexLowerArea.tscn" id="6_dpmh0"]
 
 [node name="FloatingIsland1" type="Node2D"]
