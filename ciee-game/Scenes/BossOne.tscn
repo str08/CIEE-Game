@@ -1,18 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://blpvjrj0vk0cg"]
+[gd_scene load_steps=2 format=3 uid="uid://blpvjrj0vk0cg"]
 
-[ext_resource type="PackedScene" uid="uid://cieq6mil2t854" path="res://Bosses/Scenes/BaseBoss.tscn" id="1_4w1kq"]
-[ext_resource type="Script" uid="uid://dyam3gfu6cqct" path="res://Bosses/Scripts/boss_one.gd" id="2_7n6p3"]
+[ext_resource type="PackedScene" uid="uid://cieq6mil2t854" path="res://Scenes/BaseBoss.tscn" id="1_4w1kq"]
 
 [node name="BaseBoss" instance=ExtResource("1_4w1kq")]
-script = ExtResource("2_7n6p3")
-dash_speed = 600.0
-telegraph_time = 1.0
-dash_return_speed = 300.0
-dash_cooldown = 3.0
-shoot_interval = 1.0
-phase2_threshold = 0.7
-phase3_threshold = 0.3
-dash_shoot_interval = 0.2
 
 [node name="ColorRect" parent="." index="0"]
 offset_left = 312.0

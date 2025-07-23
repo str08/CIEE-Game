@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnximj6tmxk4w"
-path="res://.godot/imported/playerCharacterfront.png-491d5c471c921a50f99c185b6fa6c3ef.ctex"
+uid="uid://lwhi8ayi28bs"
+path="res://.godot/imported/enemyCharacterBOMB.png-e66d795994c575605066861fcb53e9b2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/playerCharacterfront.png"
-dest_files=["res://.godot/imported/playerCharacterfront.png-491d5c471c921a50f99c185b6fa6c3ef.ctex"]
+source_file="res://Assets/enemyCharacterBOMB.png"
+dest_files=["res://.godot/imported/enemyCharacterBOMB.png-e66d795994c575605066861fcb53e9b2.ctex"]
 
 [params]
 

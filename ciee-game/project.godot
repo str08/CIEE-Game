@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="CIEE Game"
-run/main_scene="uid://fom3w24yh0rc"
+run/main_scene="uid://c0jfltrcdhkbx"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -61,6 +61,7 @@ Slow={
 }
 
 [layer_names]
+
 2d_physics/layer_3="Mineral"
 2d_physics/layer_5="Tileset"
 2d_physics/layer_6="Z-indexTriggers"
@@ -68,5 +69,3 @@ Slow={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
-
-
