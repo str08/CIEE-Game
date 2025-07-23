@@ -1,4 +1,4 @@
-extends "res://Bosses/Scripts/base_boss.gd"
+extends "res://Scripts/base_boss.gd"
 
 #----------------
 # Phase tuning

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cg26q68syd0em"]
 
-[ext_resource type="PackedScene" uid="uid://ue3jkgi7nmb7" path="res://Enemies/BaseEnemy.tscn" id="1_chg0y"]
-[ext_resource type="Script" uid="uid://bq3g3gox73wnd" path="res://Enemies/raider_enemy.gd" id="2_8olqh"]
+[ext_resource type="PackedScene" uid="uid://ue3jkgi7nmb7" path="res://Scenes/BaseEnemy.tscn" id="1_chg0y"]
+[ext_resource type="Script" path="res://Scripts/raider_enemy.gd" id="2_8olqh"]
 
 [node name="BaseEnemy" instance=ExtResource("1_chg0y")]
 script = ExtResource("2_8olqh")

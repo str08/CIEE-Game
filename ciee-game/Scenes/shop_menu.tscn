@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://21gvhpr5fh0q"]
+
+[ext_resource type="Script" uid="uid://by5rbn0xl1ku4" path="res://Scripts/shop_menu.gd" id="1_xysl7"]
+
+[sub_resource type="GDScript" id="GDScript_jhj42"]
+script/source = "extends Button
+
+signal attackUp
+"
+
+[sub_resource type="GDScript" id="GDScript_lvwfa"]
+script/source = "extends Button
+
+signal lifeUp
+
+func _on_pressed() -> void:
+	emit_signal(\"lifeUp\")
+	pass
+"
+
+[node name="ShopMenu" type="BoxContainer"]
+offset_right = 188.0
+offset_bottom = 147.0
+alignment = 1
+vertical = true
+script = ExtResource("1_xysl7")
+
+[node name="AttackUp" type="Button" parent="."]
+layout_mode = 2
+text = "ATTACK UP 0/3"
+script = SubResource("GDScript_jhj42")
+
+[node name="LifeUp" type="Button" parent="."]
+layout_mode = 2
+text = "LIFE UP 0/3"
+script = SubResource("GDScript_lvwfa")
+
+[node name="MoreBullets" type="Button" parent="."]
+layout_mode = 2
+text = "BULLETS UP 0/3"
+
+[connection signal="pressed" from="AttackUp" to="." method="_on_attack_up_pressed"]
+[connection signal="pressed" from="AttackUp" to="AttackUp" method="_on_pressed"]
+[connection signal="pressed" from="LifeUp" to="." method="_on_life_up_pressed"]
+[connection signal="pressed" from="LifeUp" to="AttackUp" method="_on_life_up_pressed"]
+[connection signal="pressed" from="LifeUp" to="LifeUp" method="_on_pressed"]
+[connection signal="pressed" from="MoreBullets" to="." method="_on_more_bullets_pressed"]

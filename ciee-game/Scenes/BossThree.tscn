@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cxiif1wu1v4hb"]
 
-[ext_resource type="PackedScene" uid="uid://cieq6mil2t854" path="res://Bosses/Scenes/BaseBoss.tscn" id="1_eo1bt"]
-[ext_resource type="Script" uid="uid://4shxs7b2uysg" path="res://Bosses/Scripts/boss_three.gd" id="2_tpvph"]
+[ext_resource type="PackedScene" uid="uid://cieq6mil2t854" path="res://Scenes/BaseBoss.tscn" id="1_eo1bt"]
+[ext_resource type="Script" path="res://Scripts/boss_three.gd" id="2_tpvph"]
 
 [node name="BaseBoss" instance=ExtResource("1_eo1bt")]
 script = ExtResource("2_tpvph")

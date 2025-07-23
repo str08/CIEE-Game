@@ -1,4 +1,4 @@
-extends "res://Enemies/Scripts/basic_enemy.gd"
+extends "res://Scripts/basic_enemy.gd"
 
 enum RaiderPattern {
 	DASH,
