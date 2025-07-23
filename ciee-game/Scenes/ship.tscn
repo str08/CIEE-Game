@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://bbgpobqiliyly"]
 
-[ext_resource type="Script" uid="uid://fpsege0xe0t0" path="res://Player/Scipts/ship.gd" id="1_v1qfn"]
-[ext_resource type="PackedScene" uid="uid://co0rkb7ls38ku" path="res://Player/Scenes/bullet_basic.tscn" id="2_xxxu3"]
-[ext_resource type="PackedScene" uid="uid://wnuxxpv066e7" path="res://Player/Scenes/hitbox.tscn" id="3_6ejuo"]
+[ext_resource type="Script" uid="uid://fpsege0xe0t0" path="res://Scripts/ship.gd" id="1_v1qfn"]
+[ext_resource type="PackedScene" uid="uid://co0rkb7ls38ku" path="res://Scenes/bullet_basic.tscn" id="2_xxxu3"]
+[ext_resource type="PackedScene" uid="uid://wnuxxpv066e7" path="res://Scenes/hitbox.tscn" id="3_6ejuo"]
 [ext_resource type="Texture2D" uid="uid://bxxoe6mwvqr4f" path="res://Assets/shipType1.png" id="4_6ejuo"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_v1qfn"]

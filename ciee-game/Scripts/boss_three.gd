@@ -1,4 +1,4 @@
-extends "res://Bosses/Scripts/base_boss.gd"
+extends "res://Scripts/base_boss.gd"
 
 # Phase thresholds
 @export var phase2_threshold: float = 0.66

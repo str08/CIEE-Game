@@ -45,13 +45,13 @@ func _process(delta: float) -> void:
 		shoot()
 
 	move_and_slide()
-	_clamp_to_playfield()
+	#_clamp_to_playfield()
 	
 func _on_gun_cooldown_timeout():
 	can_shoot = true
 
-func _clamp_to_playfield():
-	var r := play_config.playfield_rect
-	# If sprite is centered on the node, no half-size needed
-	global_position.x = clamp(global_position.x, r.position.x, r.position.x + r.size.x)
-	global_position.y = clamp(global_position.y, r.position.y, r.position.y + r.size.y)
+#func _clamp_to_playfield():
+	#var r := playConfig.playfield_rect
+	## If sprite is centered on the node, no half-size needed
+	#global_position.x = clamp(global_position.x, r.position.x, r.position.x + r.size.x)
+	#global_position.y = clamp(global_position.y, r.position.y, r.position.y + r.size.y)

@@ -65,6 +65,8 @@ Slow={
 2d_physics/layer_3="Mineral"
 2d_physics/layer_5="Tileset"
 2d_physics/layer_6="Z-indexTriggers"
+2d_physics/layer_7="PlayerInteract"
+2d_physics/layer_8="TreeResource"
 
 [rendering]
 

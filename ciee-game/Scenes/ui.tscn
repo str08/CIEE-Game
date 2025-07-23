@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://28a3oj1pp30g"]
+[gd_scene load_steps=2 format=3 uid="uid://b2bj32j4purma"]
 
-[ext_resource type="Script" uid="uid://xjjaeiw75am5" path="res://Scripts/ui.gd" id="1_jxero"]
+[ext_resource type="Script" path="res://Scripts/ui.gd" id="1_jxero"]
 
 [node name="UI" type="BoxContainer"]
 layout_direction = 2

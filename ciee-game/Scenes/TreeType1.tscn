@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://cl6vngjfk15sp"]
+[gd_scene load_steps=4 format=3 uid="uid://cl6vngjfk15sp"]
 
+[ext_resource type="Script" uid="uid://b6t2dddaqxy44" path="res://Scenes/tree.gd" id="1_gac68"]
 [ext_resource type="Texture2D" uid="uid://ci1nkgtq3i3mi" path="res://Assets/tree1.png" id="1_rvwti"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rvwti"]
@@ -9,6 +10,7 @@ size = Vector2(40, 20)
 texture_filter = 1
 collision_layer = 16
 gravity_scale = 0.0
+script = ExtResource("1_gac68")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_rvwti")
