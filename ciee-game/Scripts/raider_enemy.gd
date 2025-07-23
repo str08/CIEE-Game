@@ -1,4 +1,4 @@
-extends "res://Scripts/basic_enemy.gd"
+extends "res://Enemies/Scripts/basic_enemy.gd"
 
 enum RaiderPattern {
 	DASH,
@@ -30,8 +30,8 @@ func _process(delta: float) -> void:
 func _ready():
 	pivot = position
 	time = randf() * PI * 2
-	if use_random_movement:
-		pattern = RaiderPattern.values()[randi() % RaiderPattern.size()]
+	#if use_random_movement:
+	#	pattern = RaiderPattern.values()[randi() % RaiderPattern.size()]
 	
 func _dash(delta: float) -> void:
 	position.x += dash_speed * direction * delta
