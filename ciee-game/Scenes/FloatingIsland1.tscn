@@ -5,7 +5,11 @@
 [ext_resource type="PackedScene" path="res://Scenes/TreeType1.tscn" id="3_kyhug"]
 [ext_resource type="PackedScene" path="res://Scenes/TreeType4.tscn" id="4_gciuc"]
 [ext_resource type="PackedScene" path="res://Scenes/TreeType5.tscn" id="5_6sx6n"]
+<<<<<<< Updated upstream
 [ext_resource type="PackedScene" uid="uid://c3y6pmjubf1le" path="res://Scenes/Z-indexLowerArea.tscn" id="6_dpmh0"]
+=======
+[ext_resource type="PackedScene" uid="uid://dv54it0fdyals" path="res://Scenes/Z-indexLowerArea.tscn" id="6_dpmh0"]
+>>>>>>> Stashed changes
 
 [node name="FloatingIsland1" type="Node2D"]
 

@@ -3,6 +3,10 @@ extends Area2D
 @export var speed = -1000
 @export var damage = 1
 
+
+func _ready() -> void:
+	add_to_group("player_bullets")
+
 func start(pos):
 	position = pos
 
