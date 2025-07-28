@@ -2,7 +2,7 @@ extends BoxContainer
 
 signal healthUp
 signal attackUp
-signal bulletUp
+signal bulletUp22
 
 var numBoughtLife = 0
 var numBoughtAtk = 0
@@ -12,26 +12,38 @@ var numBoughtBul = 0
 @onready var life_up: Button = $LifeUp
 @onready var more_bullets: Button = $MoreBullets
 
+func _process(delta: float) -> void:
+	if Input.is_action_pressed("Shop"):
+		visible =!visible
+		attack_up.disabled= !attack_up.disabled
+		life_up.disabled= !life_up.disabled
+		more_bullets.disabled=!more_bullets.disabled
+
+
 func _on_life_up_pressed() -> void:
-	if numBoughtLife<3:
-		numBoughtLife+=1
-		emit_signal("healthUp")
-	$LifeUp.text="LIFE UP "+ str(numBoughtLife) +"/3"
+	if(PlayerStats.wood>=5):
+		if numBoughtLife<3:
+			PlayerStats.change_wood(-5)
+			numBoughtLife+=1
+			PlayerStats.change_health(1)
+			$LifeUp.text="LIFE UP "+ str(numBoughtLife) +"/3"
 
 	pass # Replace with function body.
 
 func _on_attack_up_pressed() -> void:
-	if numBoughtAtk<3:
-		numBoughtAtk+=1
-		emit_signal("attackUp")
-	$AttackUp.text= "ATTACK UP "+str(numBoughtAtk) +"/3"
-
+	if(PlayerStats.minerals>=5):
+		if numBoughtAtk<3:
+			PlayerStats.add_minerals(-5)
+			numBoughtAtk+=1
+			PlayerStats.change_damage(1)
+			$AttackUp.text= "ATTACK UP "+str(numBoughtAtk) +"/3"
 	pass # Replace with function body.
 
 func _on_more_bullets_pressed() -> void:
-	if numBoughtBul<3:
-		numBoughtBul+=1
-		emit_signal("bulletUp")
-	$MoreBullets.text= "BULLETS UP " + str(numBoughtBul)  + "/3"
-
+	if(PlayerStats.minerals>=5):
+		if numBoughtBul<3:
+			PlayerStats.add_minerals(-5)
+			numBoughtBul+=1
+			PlayerStats.change_bullets(1)
+			$MoreBullets.text= "BULLETS UP " + str(numBoughtBul)  + "/3"
 	pass # Replace with function body.

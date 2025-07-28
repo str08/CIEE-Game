@@ -17,5 +17,6 @@ func _on_area_entered(area: Area2D) -> void:
 	print("Touched by:", area)
 	if area.is_in_group("player_pickup"):
 		print("Picked up mineral!")
-		emit_signal("increaseMinerals")
+		PlayerStats.add_minerals(1)
+		#emit_signal("increaseMinerals")
 		queue_free()

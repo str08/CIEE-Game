@@ -11,21 +11,23 @@ signal increaseMinerals
 
 func _ready():
 	print("READY")
-	$"../Mineral".connect("increaseMinerals", _on_increaseMinerals)
 	mineral_count.text= "Minerals: " +str(mineralCount)
 	lives.text= "Lives: "+str(livesCount)
 	
-	
 
-func _on_increaseMinerals():
-	mineralCount+=1
-	mineral_count.text= "Minerals: " +str(mineralCount)
-	print("WE GOT MONEY")
-	print(mineralCount)
-	
-func _on_increaseLives():
-	livesCount+=1
-	lives.text= "Lives: " +str(livesCount)
-	print("WE GOT LIFE")
-	print(livesCount)
-	
+func _process(delta: float) -> void:
+	mineral_count.text= "Minerals: " +str(PlayerStats.minerals)
+	lives.text= "Lives: "+str(PlayerStats.player_health)
+
+
+#func _on_increaseLives():
+	#livesCount+=1
+	#lives.text= "Lives: " +str(livesCount)
+	#print("WE GOT LIFE")
+	#print(livesCount)
+#
+#func _on_decreaseLives():
+	#livesCount+=1
+	#lives.text= "Lives: " +str(livesCount)
+	#print("WE LOST LIFE")
+	#print(livesCount)

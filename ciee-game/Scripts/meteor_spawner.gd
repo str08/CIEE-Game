@@ -25,15 +25,13 @@ func _on_spawn_meteor():
 		meteor.speed = speed
 		var brightness = lerp(0.1, .4, (speed - min_speed) / (max_speed - min_speed))
 		meteor.brightness = brightness
+
 	else:
-		meteor = meteor_foreground.instantiate()
+		meteor= meteor_foreground.instantiate()
 		meteor.position.x = randf_range(-370, 330)
 		meteor.position.y = -270
 		var speed = randf_range(min_speed, max_speed)
 		meteor.speed = speed
-
 		
-
-
-	
-	get_tree().root.add_child(meteor)
+		
+	get_tree().current_scene.add_child(meteor)
