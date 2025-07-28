@@ -134,3 +134,6 @@ func _update_phase(delta):
 		_phase_three(delta)
 	else:
 		_phase_one(delta)
+		
+func _die():
+	queue_free()
