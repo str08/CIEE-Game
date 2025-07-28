@@ -5,13 +5,17 @@ enum KamikazeType {
 	SPIRAL,
 	ZIGZAG
 }
-
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var ship: CharacterBody2D = get_parent().get_node_or_null("Ship")
+#@onready var ship: CharacterBody2D = $Ship
 @export var kamikaze_type: KamikazeType = KamikazeType.STRAIGHT
 @export var acceleration: float = 50.0
 @export var max_speed: float = 300.0
 @export var zigzag_amplitude: float = 60.0
 @export var spiral_rotation_speed: float = 4.0
-@export var target_position: Vector2 = Vector2(320, 240) # Placeholder (screen center)
+#@export var target_position: Vector2 = Vector2(320, 240) # Placeholder (screen center)
+@export var target_position: Vector2  # Placeholder (screen center)
+
 # t_p = $"/root/Main/Player".position
 
 var velocity: Vector2 = Vector2.ZERO
@@ -28,9 +32,13 @@ func _process(delta: float) -> void:
 			_zigzag_dive(delta)
 
 func _ready():
-	pass
-	#if use_random_movement:
+	add_to_group("enemy")
+	if ship:
+		target_position = ship.position
+	else:
+		print("Could not find player!")	#if use_random_movement:
 	#	kamikaze_type = KamikazeType.values()[randi() % KamikazeType.size()]
+	animated_sprite_2d.play("flying")
 
 func _straight_dive(delta: float) -> void:
 	var direction = (target_position - position).normalized()
@@ -56,3 +64,15 @@ func _zigzag_dive(delta: float) -> void:
 	# Apply horizontal oscillation for zigzag motion
 	position += velocity * delta
 	position.x += sin(time * 8) * zigzag_amplitude * delta
+	
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if area.is_in_group("player_bullets"):
+		var dmg = area.damage if "damage" in area else 1
+		area.queue_free()
+		health -= dmg
+
+		if health <= 0:
+			animated_sprite_2d.play("explosion")
+			queue_free()

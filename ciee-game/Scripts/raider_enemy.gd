@@ -28,6 +28,7 @@ func _process(delta: float) -> void:
 			_circle_sweep(delta)
 
 func _ready():
+	add_to_group("enemy")
 	pivot = position
 	time = randf() * PI * 2
 	#if use_random_movement:
@@ -50,3 +51,13 @@ func _circle_sweep(delta: float) -> void:
 	angle += frequency * delta
 	position.x = pivot.x + cos(angle) * circle_radius
 	position.y = pivot.y + sin(angle) * circle_radius * 0.5
+	
+	
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if area.is_in_group("player_bullets"):
+		var dmg = area.damage if "damage" in area else 1
+		area.queue_free()
+		health -= dmg
+
+		if health <= 0:
+			queue_free()
