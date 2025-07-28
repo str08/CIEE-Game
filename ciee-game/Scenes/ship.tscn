@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bbgpobqiliyly"]
+[gd_scene load_steps=7 format=3 uid="uid://bbgpobqiliyly"]
 
 [ext_resource type="Script" uid="uid://fpsege0xe0t0" path="res://Scripts/ship.gd" id="1_v1qfn"]
 [ext_resource type="PackedScene" uid="uid://co0rkb7ls38ku" path="res://Scenes/bullet_basic.tscn" id="2_xxxu3"]
@@ -8,15 +8,15 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_v1qfn"]
 radius = 4.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_6ejuo"]
+radius = 4.0
+
 [node name="Ship" type="CharacterBody2D"]
 scale = Vector2(0.5, 0.5)
+collision_mask = 8
 script = ExtResource("1_v1qfn")
 bullet_scene = ExtResource("2_xxxu3")
 shape_scene = ExtResource("3_6ejuo")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_v1qfn")
-debug_color = Color(0.996763, 0, 0.180235, 0.42)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("4_6ejuo")
@@ -24,4 +24,23 @@ texture = ExtResource("4_6ejuo")
 [node name="GunCooldown" type="Timer" parent="."]
 one_shot = true
 
+[node name="PickupArea" type="Area2D" parent="."]
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupArea"]
+shape = SubResource("CircleShape2D_v1qfn")
+debug_color = Color(0.996763, 0, 0.180235, 0.42)
+
+[node name="Hitbox" type="Area2D" parent="."]
+collision_mask = 8
+
+[node name="Area2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("CircleShape2D_6ejuo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_v1qfn")
+debug_color = Color(0.996763, 0, 0.180235, 0.42)
+
 [connection signal="timeout" from="GunCooldown" to="." method="_on_gun_cooldown_timeout"]
+[connection signal="area_entered" from="PickupArea" to="." method="_on_pickup_area_area_entered"]
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
