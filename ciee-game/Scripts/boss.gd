@@ -126,7 +126,9 @@ func _phase_three(delta):
 	_movement_three(delta)
 
 func _update_phase(delta):
-	if health <= 900:
+	if health <= 0:
+		_die()
+	elif health <= 900:
 		_phase_two(delta)
 	elif health <= 400:
 		_phase_three(delta)

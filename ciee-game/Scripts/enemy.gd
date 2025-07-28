@@ -10,6 +10,8 @@ const bullet_scene = preload	("res://Enemy/enemy_projectile.tscn")
 var rotation_direction = 1 # 1 for clockwise, -1 for counterclockwise
 var direction_change_timer = 0 # Timer to track elapsed time
 
+@export var health = 300
+
 @onready var shoot_timer = $ShootTimer
 @onready var rotator = $Rotator
 
@@ -33,6 +35,9 @@ func _physics_process(delta: float):
 		
 	var new_rotation = rotator.rotation_degrees + rotate_speed * rotation_direction * delta
 	rotator.rotation_degrees = fmod(new_rotation, 360)
+	
+	if health == 0:
+		_die()
 
 func _on_shoot_timer_timeout():
 	for r in rotator.get_children():
@@ -40,3 +45,6 @@ func _on_shoot_timer_timeout():
 		get_parent().add_child(bullet)
 		bullet.position = r.global_position
 		bullet.rotation = r.global_rotation
+
+func _die():
+	queue_free()

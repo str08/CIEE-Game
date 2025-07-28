@@ -14,6 +14,8 @@ const bullet_scene = preload	("res://Enemy/enemy_projectile.tscn")
 @export var spawn_point_count = 100
 @export var radius = 15
 
+@export var health = 100
+
 @onready var rotator = $Rotator
 @onready var lifetime = $Lifetime
 
@@ -24,6 +26,9 @@ func _physics_process(delta: float) -> void:
 	
 	#if position.distance_to(player_pos) > 3:
 	#	position += target_pos * speed * delta
+	
+	if health == 0:
+		_die()
 
 func _on_lifetime_timeout():
 	_die()
