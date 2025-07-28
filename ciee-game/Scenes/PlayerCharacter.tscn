@@ -1,6 +1,6 @@
 [gd_scene load_steps=19 format=3 uid="uid://b185sc41vbcpk"]
 
-[ext_resource type="Script" uid="uid://d2vsj1dbaw0tw" path="res://Scenes/player_character.gd" id="1_5gnj7"]
+[ext_resource type="Script" uid="uid://d2vsj1dbaw0tw" path="res://Scripts/player_character.gd" id="1_5gnj7"]
 [ext_resource type="Texture2D" uid="uid://bcmmddebp0fe7" path="res://Assets/playerCharacterfull.png" id="1_v7sut"]
 
 [sub_resource type="Animation" id="Animation_2getf"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://df2r47shot0oo"]
 
-[ext_resource type="Script" uid="uid://c330xhrpg36l0" path="res://Scenes/wood_gather_area.gd" id="1_f4ke3"]
+[ext_resource type="Script" uid="uid://c330xhrpg36l0" path="res://Scripts/wood_gather_area.gd" id="1_f4ke3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_es8da"]
 

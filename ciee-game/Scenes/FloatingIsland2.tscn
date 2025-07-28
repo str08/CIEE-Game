@@ -164,7 +164,7 @@ scale = Vector2(2, 1)
 
 [connection signal="area_entered" from="Z-indexLowerAreas/Z-indexLowerArea" to="PlayerCharacter" method="_on_zindex_lower_area_area_entered"]
 [connection signal="area_exited" from="Z-indexLowerAreas/Z-indexLowerArea" to="PlayerCharacter" method="_on_zindex_lower_area_area_exited"]
-[connection signal="area_entered" from="Z-indexLowerAreas/Z-indexLowerArea2" to="PlayerCharacter" method="_on_zindex_lower_area_2_area_entered"]
+[connection signal="area_entered" from="Z-indexLowerAreas/Z-indexLowerArea2" to="PlayerCharacter" method="_on_zindex_lower_area_area_entered"]
 [connection signal="area_exited" from="Z-indexLowerAreas/Z-indexLowerArea2" to="PlayerCharacter" method="_on_zindex_lower_area_area_exited"]
 [connection signal="area_entered" from="Z-indexLowerAreas/Z-indexLowerArea3" to="PlayerCharacter" method="_on_zindex_lower_area_area_entered"]
 [connection signal="area_exited" from="Z-indexLowerAreas/Z-indexLowerArea3" to="PlayerCharacter" method="_on_zindex_lower_area_area_exited"]
