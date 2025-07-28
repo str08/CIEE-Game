@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://fsbg6dfqa5ii"]
+[gd_scene load_steps=8 format=4 uid="uid://c0wyjircvee30"]
 
 [ext_resource type="TileSet" uid="uid://dnsfqxhiwo5nb" path="res://Assets/Tilemaps/Islands.tres" id="1_mpukv"]
 [ext_resource type="PackedScene" uid="uid://ca4qs67yjfkqp" path="res://Scenes/TreeType4.tscn" id="2_irm3i"]

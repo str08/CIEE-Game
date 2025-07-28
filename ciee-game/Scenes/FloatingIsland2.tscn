@@ -158,3 +158,7 @@ scale = Vector2(2, 1)
 
 [node name="PlayerCharacter" parent="." instance=ExtResource("7_hpw7l")]
 position = Vector2(-33, 555)
+
+[node name="Camera2D" type="Camera2D" parent="PlayerCharacter"]
+
+[connection signal="area_entered" from="Z-indexLowerAreas/Z-indexLowerArea" to="PlayerCharacter" method="_on_zindex_lower_area_area_entered"]
