@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://cr71xp1w8yia8"]
+
+[ext_resource type="Script" uid="uid://ybh33rfn7v5r" path="res://Enemy/enemy_projectile.gd" id="1_vpq67"]
+[ext_resource type="Texture2D" uid="uid://jejlfbwmu3tk" path="res://Assets/bulletTypeOne.png" id="2_ccnu0"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xl5xb"]
+radius = 4.0
+height = 12.0
+
+[node name="Enemy Projectile" type="Area2D"]
+script = ExtResource("1_vpq67")
+speed = 500
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
+texture = ExtResource("2_ccnu0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 1)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_xl5xb")
+
+[node name="Lifetime Timer" type="Timer" parent="."]
+wait_time = 1.5
+autostart = true
+
+[connection signal="timeout" from="Lifetime Timer" to="." method="_on_lifetime_timer_timeout"]
