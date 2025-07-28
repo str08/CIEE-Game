@@ -30,7 +30,7 @@ func _ready():
 func _player_pos() -> Vector2:
 	if _player:
 		return _player.global_position
-	return play_config.playfield_rect.size * 0.5  # fallback center
+	return PlayConfig.playfield_rect.size * 0.5  # fallback center
 
 func take_damage(amount: int):
 	health -= amount

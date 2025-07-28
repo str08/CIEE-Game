@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://c0jfltrcdhkbx"]
 
 [ext_resource type="PackedScene" uid="uid://bbgpobqiliyly" path="res://Scenes/ship.tscn" id="1_ebmjs"]
-[ext_resource type="PackedScene" uid="uid://cj255r3n2fcye" path="res://Scenes/enemy_spawner.tscn" id="1_h4fw4"]
+[ext_resource type="PackedScene" path="res://Scenes/enemy_spawner.tscn" id="1_h4fw4"]
 [ext_resource type="PackedScene" uid="uid://7mo2vi5ne4ni" path="res://Scenes/mineral.tscn" id="1_i6g32"]
 [ext_resource type="Shader" uid="uid://lsbx34rwfcub" path="res://Scripts/game.gdshader" id="2_wrm1d"]
 [ext_resource type="Texture2D" uid="uid://gfinxnkfg5y8" path="res://Assets/Starfield7-512x512.png" id="3_3dryh"]
 [ext_resource type="PackedScene" uid="uid://21gvhpr5fh0q" path="res://Scenes/shop_menu.tscn" id="4_3dryh"]
-[ext_resource type="PackedScene" uid="uid://dctp3mgxi5sxc" path="res://Scenes/meteor_spawner.tscn" id="5_wowpa"]
+[ext_resource type="PackedScene" path="res://Scenes/meteor_spawner.tscn" id="5_wowpa"]
 [ext_resource type="PackedScene" uid="uid://b2bj32j4purma" path="res://Scenes/ui.tscn" id="7_1l0tm"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_wowpa"]
