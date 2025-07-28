@@ -28,7 +28,10 @@ tile_map_data = PackedByteArray("AAD///r/AAAVAAMAAAAAAPr/AAAVAAMAAAAAAPv/AAAVAAM
 tile_set = ExtResource("1_yxo2o")
 
 [node name="PlayerCharacter" parent="." instance=ExtResource("7_hpw7l")]
+<<<<<<< HEAD
 z_index = 1
+=======
+>>>>>>> c86aadaf6204dacbbd8c77d4545d7735786482d2
 position = Vector2(-33, 555)
 
 [node name="Camera2D" type="Camera2D" parent="PlayerCharacter"]
@@ -145,6 +148,7 @@ scale = Vector2(0.4, 0.3)
 
 [node name="WoodGatherArea8" parent="WoodGatherAreas" instance=ExtResource("6_ov8u2")]
 position = Vector2(389, -282)
+scale = Vector2(0.6, 0.6)
 
 [node name="WoodGatherArea9" parent="WoodGatherAreas" instance=ExtResource("6_ov8u2")]
 position = Vector2(450, -263)
@@ -164,7 +168,11 @@ scale = Vector2(2, 1)
 
 [connection signal="area_entered" from="Z-indexLowerAreas/Z-indexLowerArea" to="PlayerCharacter" method="_on_zindex_lower_area_area_entered"]
 [connection signal="area_exited" from="Z-indexLowerAreas/Z-indexLowerArea" to="PlayerCharacter" method="_on_zindex_lower_area_area_exited"]
+<<<<<<< HEAD
 [connection signal="area_entered" from="Z-indexLowerAreas/Z-indexLowerArea2" to="PlayerCharacter" method="_on_zindex_lower_area_2_area_entered"]
+=======
+[connection signal="area_entered" from="Z-indexLowerAreas/Z-indexLowerArea2" to="PlayerCharacter" method="_on_zindex_lower_area_area_entered"]
+>>>>>>> c86aadaf6204dacbbd8c77d4545d7735786482d2
 [connection signal="area_exited" from="Z-indexLowerAreas/Z-indexLowerArea2" to="PlayerCharacter" method="_on_zindex_lower_area_area_exited"]
 [connection signal="area_entered" from="Z-indexLowerAreas/Z-indexLowerArea3" to="PlayerCharacter" method="_on_zindex_lower_area_area_entered"]
 [connection signal="area_exited" from="Z-indexLowerAreas/Z-indexLowerArea3" to="PlayerCharacter" method="_on_zindex_lower_area_area_exited"]
@@ -184,3 +192,28 @@ scale = Vector2(2, 1)
 [connection signal="area_exited" from="Z-indexLowerAreas/Z-indexLowerArea11" to="PlayerCharacter" method="_on_zindex_lower_area_area_exited"]
 [connection signal="area_entered" from="Z-indexLowerAreas/Z-indexLowerArea6" to="PlayerCharacter" method="_on_zindex_lower_area_area_entered"]
 [connection signal="area_exited" from="Z-indexLowerAreas/Z-indexLowerArea6" to="PlayerCharacter" method="_on_zindex_lower_area_area_exited"]
+<<<<<<< HEAD
+=======
+[connection signal="area_entered" from="WoodGatherAreas/WoodGatherArea" to="PlayerCharacter" method="_on_wood_gather_area_area_entered"]
+[connection signal="area_entered" from="WoodGatherAreas/WoodGatherArea" to="Trees/TreeType1" method="_on_wood_gather_large"]
+[connection signal="area_entered" from="WoodGatherAreas/WoodGatherArea2" to="PlayerCharacter" method="_on_wood_gather_area_area_entered"]
+[connection signal="area_entered" from="WoodGatherAreas/WoodGatherArea2" to="Trees/TreeType5" method="_on_wood_gather_small"]
+[connection signal="area_entered" from="WoodGatherAreas/WoodGatherArea3" to="PlayerCharacter" method="_on_wood_gather_area_area_entered"]
+[connection signal="area_entered" from="WoodGatherAreas/WoodGatherArea3" to="Trees/TreeType11" method="_on_wood_gather_medium"]
+[connection signal="area_entered" from="WoodGatherAreas/WoodGatherArea4" to="PlayerCharacter" method="_on_wood_gather_area_area_entered"]
+[connection signal="area_entered" from="WoodGatherAreas/WoodGatherArea4" to="Trees/TreeType7" method="_on_wood_gather_small"]
+[connection signal="area_entered" from="WoodGatherAreas/WoodGatherArea5" to="PlayerCharacter" method="_on_wood_gather_area_area_entered"]
+[connection signal="area_entered" from="WoodGatherAreas/WoodGatherArea5" to="Trees/TreeType4" method="_on_wood_gather_medium"]
+[connection signal="area_entered" from="WoodGatherAreas/WoodGatherArea7" to="PlayerCharacter" method="_on_wood_gather_area_area_entered"]
+[connection signal="area_entered" from="WoodGatherAreas/WoodGatherArea7" to="Trees/TreeType10" method="_on_wood_gather_small"]
+[connection signal="area_entered" from="WoodGatherAreas/WoodGatherArea8" to="PlayerCharacter" method="_on_wood_gather_area_area_entered"]
+[connection signal="area_entered" from="WoodGatherAreas/WoodGatherArea8" to="Trees/TreeType8" method="_on_wood_gather_medium"]
+[connection signal="area_entered" from="WoodGatherAreas/WoodGatherArea9" to="PlayerCharacter" method="_on_wood_gather_area_area_entered"]
+[connection signal="area_entered" from="WoodGatherAreas/WoodGatherArea9" to="Trees/TreeType9" method="_on_wood_gather_small"]
+[connection signal="area_entered" from="WoodGatherAreas/WoodGatherArea10" to="PlayerCharacter" method="_on_wood_gather_area_area_entered"]
+[connection signal="area_exited" from="WoodGatherAreas/WoodGatherArea10" to="Trees/TreeType12" method="_on_wood_gather_small"]
+[connection signal="area_entered" from="WoodGatherAreas/WoodGatherArea11" to="PlayerCharacter" method="_on_wood_gather_area_area_entered"]
+[connection signal="area_exited" from="WoodGatherAreas/WoodGatherArea11" to="Trees/TreeType2" method="_on_wood_gather_large"]
+[connection signal="area_entered" from="WoodGatherAreas/WoodGatherArea6" to="PlayerCharacter" method="_on_wood_gather_area_area_entered"]
+[connection signal="area_exited" from="WoodGatherAreas/WoodGatherArea6" to="Trees/TreeType3" method="_on_wood_gather_large"]
+>>>>>>> c86aadaf6204dacbbd8c77d4545d7735786482d2
