@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://fom3w24yh0rc"]
+[gd_scene load_steps=11 format=4 uid="uid://fom3w24yh0rc"]
 
 [ext_resource type="TileSet" uid="uid://dnsfqxhiwo5nb" path="res://Assets/Tilemaps/Islands.tres" id="1_u5xis"]
 [ext_resource type="PackedScene" uid="uid://b185sc41vbcpk" path="res://Scenes/PlayerCharacter.tscn" id="2_wp3r2"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://df2r47shot0oo" path="res://Scenes/WoodGatherArea.tscn" id="7_3uaex"]
 [ext_resource type="AudioStream" uid="uid://cqgjt3m2pp83r" path="res://Assets/Music/mus_floating_island.ogg" id="8_jf7h4"]
 [ext_resource type="Script" uid="uid://wx3v4gx10whg" path="res://audio.gd" id="9_g2t3a"]
+[ext_resource type="Texture2D" uid="uid://t78c82ei1ua6" path="res://Assets/bg.png" id="10_jf7h4"]
 
 [node name="FloatingIsland1" type="Node2D"]
 
@@ -46,6 +47,11 @@ stream = ExtResource("8_jf7h4")
 autoplay = true
 max_polyphony = 2
 script = ExtResource("9_g2t3a")
+
+[node name="Polygon2D" type="Polygon2D" parent="PlayerCharacter/Camera2D"]
+z_index = 10
+color = Color(0.0751796, 0.0204729, 0.342617, 0.337255)
+polygon = PackedVector2Array(-640, -480, -640, 480, 640, 480, 640, -480)
 
 [node name="Trees" type="Node2D" parent="."]
 
@@ -162,6 +168,13 @@ scale = Vector2(2, 1)
 [node name="WoodGatherArea10" parent="WoodGatherAreas" instance=ExtResource("7_3uaex")]
 position = Vector2(-257, -888)
 scale = Vector2(2, 1)
+
+[node name="bg" type="Sprite2D" parent="."]
+modulate = Color(0.435192, 0.435192, 0.435192, 1)
+z_index = -10
+position = Vector2(256, -1071)
+rotation = 1.5708
+texture = ExtResource("10_jf7h4")
 
 [connection signal="area_entered" from="Z-indexLowerAreas/Z-indexLowerArea" to="PlayerCharacter" method="_on_zindex_lower_area_area_entered"]
 [connection signal="area_exited" from="Z-indexLowerAreas/Z-indexLowerArea" to="PlayerCharacter" method="_on_zindex_lower_area_area_exited"]
