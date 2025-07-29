@@ -146,7 +146,7 @@ position = Vector2(-307, -727)
 scale = Vector2(2, 1)
 
 [node name="WoodGatherArea6" parent="WoodGatherAreas" instance=ExtResource("6_tfkfx")]
-position = Vector2(95, -648)
+position = Vector2(100, -644)
 scale = Vector2(0.6, 0.6)
 
 [node name="WoodGatherArea7" parent="WoodGatherAreas" instance=ExtResource("6_tfkfx")]
