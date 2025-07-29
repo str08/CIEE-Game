@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://c3y6pmjubf1le" path="res://Scenes/Z-indexLowerArea.tscn" id="6_dpmh0"]
 [ext_resource type="PackedScene" uid="uid://df2r47shot0oo" path="res://Scenes/WoodGatherArea.tscn" id="7_3uaex"]
 [ext_resource type="AudioStream" uid="uid://cqgjt3m2pp83r" path="res://Assets/Music/mus_floating_island.ogg" id="8_jf7h4"]
-[ext_resource type="Script" path="res://audio.gd" id="9_g2t3a"]
+[ext_resource type="Script" uid="uid://wx3v4gx10whg" path="res://audio.gd" id="9_g2t3a"]
 [ext_resource type="Texture2D" uid="uid://t78c82ei1ua6" path="res://Assets/bg.png" id="10_jf7h4"]
 [ext_resource type="PackedScene" uid="uid://21gvhpr5fh0q" path="res://Scenes/shop_menu.tscn" id="12_30ut7"]
 

@@ -24,6 +24,6 @@ shape = SubResource("CapsuleShape2D_2pb1h")
 
 [node name="Rotator" type="Node2D" parent="."]
 
-[connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_entered" from="." to="." method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="timeout" from="ShootTimer" to="." method="_on_shoot_timer_timeout"]
