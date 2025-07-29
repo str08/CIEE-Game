@@ -1,0 +1,188 @@
+[gd_scene load_steps=15 format=3 uid="uid://bl4c1lcqn2ebt"]
+
+[ext_resource type="Script" uid="uid://ljekxirxfr65" path="res://Scripts/game_boss.gd" id="1_eum6d"]
+[ext_resource type="Shader" uid="uid://lsbx34rwfcub" path="res://Scripts/game.gdshader" id="2_wbtvd"]
+[ext_resource type="Texture2D" uid="uid://gfinxnkfg5y8" path="res://Assets/Starfield7-512x512.png" id="3_r2rt0"]
+[ext_resource type="PackedScene" uid="uid://21gvhpr5fh0q" path="res://Scenes/shop_menu.tscn" id="4_bfctn"]
+[ext_resource type="PackedScene" uid="uid://bbgpobqiliyly" path="res://Scenes/ship.tscn" id="5_mfx33"]
+[ext_resource type="AudioStream" uid="uid://mv18cid8dm0m" path="res://Assets/Music/laser-gun-short.ogg" id="6_60qgv"]
+[ext_resource type="PackedScene" uid="uid://b2bj32j4purma" path="res://Scenes/ui.tscn" id="7_02ml5"]
+[ext_resource type="AudioStream" uid="uid://bfrxalbs705bx" path="res://Assets/Music/mus_boss1.ogg" id="8_fyktb"]
+[ext_resource type="PackedScene" uid="uid://dtqtkr7kwh6s2" path="res://Scenes/boss.tscn" id="9_fyktb"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wowpa"]
+shader = ExtResource("2_wbtvd")
+
+[sub_resource type="Animation" id="Animation_o5yvi"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Polygon2D:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333333),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("audio:volume_db")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_ldgsr"]
+resource_name = "fade_out"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Polygon2D:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("audio:volume_db")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(3.25, 5.46417),
+"update": 0,
+"values": [0.0, -80.0]
+}
+
+[sub_resource type="Animation" id="Animation_fyktb"]
+resource_name = "fade_in"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Polygon2D:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Polygon2D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rku1e"]
+_data = {
+&"RESET": SubResource("Animation_o5yvi"),
+&"fade_in": SubResource("Animation_fyktb"),
+&"fade_out": SubResource("Animation_ldgsr")
+}
+
+[node name="GameBoss" type="Node2D"]
+script = ExtResource("1_eum6d")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-2, 0)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.377919, 0.377919, 0.377919, 1)
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_wowpa")
+offset_left = -339.0
+offset_top = -262.0
+offset_right = 326.0
+offset_bottom = 281.0
+texture = ExtResource("3_r2rt0")
+
+[node name="ShopMenu" parent="." instance=ExtResource("4_bfctn")]
+visible = false
+offset_left = 101.0
+offset_top = -203.0
+offset_right = 289.0
+offset_bottom = -56.0
+
+[node name="Ship" parent="." instance=ExtResource("5_mfx33")]
+texture_filter = 1
+position = Vector2(0, 8)
+scale = Vector2(2, 2)
+collision_mask = 4
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Ship"]
+stream = ExtResource("6_60qgv")
+volume_db = -20.0
+pitch_scale = 0.6
+
+[node name="UI" parent="." instance=ExtResource("7_02ml5")]
+offset_left = -306.0
+offset_top = 143.0
+offset_right = -187.0
+offset_bottom = 193.0
+
+[node name="anim" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_rku1e")
+}
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+z_index = 20
+color = Color(0, 0, 0, 0)
+polygon = PackedVector2Array(-731, -729, -731, 548, 750, 548, 750, -729)
+
+[node name="audio" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_fyktb")
+autoplay = true
+
+[node name="Boss" parent="." instance=ExtResource("9_fyktb")]
+position = Vector2(1, -326)
+health = 160
+
+[node name="WinScreen" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="WinScreen"]
+texture_filter = 1
+layout_mode = 0
+offset_left = -110.0
+offset_top = -17.0
+offset_right = 97.0
+offset_bottom = 38.0
+theme_override_font_sizes/font_size = 40
+text = "YOU WON!"
+
+[node name="Label" type="Label" parent="WinScreen/Label"]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 49.0
+offset_right = 144.0
+offset_bottom = 72.0
+text = "For now.."

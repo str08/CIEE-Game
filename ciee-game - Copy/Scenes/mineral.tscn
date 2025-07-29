@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://7mo2vi5ne4ni"]
+
+[ext_resource type="Script" uid="uid://i3b2l2kikuu0" path="res://Scripts/mineral.gd" id="1_lyrpc"]
+[ext_resource type="Texture2D" uid="uid://cphv77swkdix3" path="res://Assets/gems.png" id="2_asmqh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_asmqh"]
+size = Vector2(14, 14)
+
+[node name="Mineral" type="Area2D"]
+collision_layer = 4
+script = ExtResource("1_lyrpc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_asmqh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_asmqh")
+hframes = 20
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

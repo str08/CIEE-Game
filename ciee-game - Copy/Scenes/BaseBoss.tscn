@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://cieq6mil2t854"]
+
+[ext_resource type="Script" uid="uid://bb2urcjeq28xo" path="res://Scripts/base_boss.gd" id="1_dq00a"]
+
+[node name="BaseBoss" type="Node2D"]
+script = ExtResource("1_dq00a")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 32.0
+offset_bottom = 32.0
+color = Color(1, 0, 0, 1)
+
+[node name="PhaseTimer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
